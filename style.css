@@ -1,0 +1,281 @@
+
+/* SDC310L Week 2 - RX-78-2 Gundam Theme */
+
+:root {
+    --gundam-blue: #1554B4;
+    --gundam-red: #D92732;
+    --gundam-yellow: #F5C518;
+    --armor-white: #F4F6FA;
+    --frame-black: #151C2B;
+    --panel-gray: #273244;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--frame-black);
+    color: var(--armor-white);
+    font: 16px/1.5 Arial, sans-serif;
+}
+
+.wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 28px;
+}
+
+/* Gundam-inspired header */
+
+.site-header {
+    background: var(--gundam-blue);
+    color: white;
+    padding: 25px 0;
+    border-bottom: 6px solid var(--gundam-red);
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.eyebrow {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--gundam-yellow);
+}
+
+.site-header h1 {
+    font-size: 34px;
+    margin: 2px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.site-header p {
+    margin: 0;
+    color: #E3EBFA;
+}
+
+.nav-link {
+    background: var(--gundam-yellow);
+    color: var(--frame-black);
+    padding: 12px 19px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    background: var(--gundam-red);
+    color: white;
+}
+
+/* Page headings */
+
+.page-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 34px 0 24px;
+    gap: 15px;
+}
+
+.page-heading h2 {
+    font-size: 28px;
+    margin: 0 0 5px;
+    color: var(--gundam-yellow);
+    text-transform: uppercase;
+}
+
+.page-heading p {
+    color: #B9C5D6;
+    margin: 0;
+}
+
+.count {
+    border: 1px solid var(--gundam-blue);
+    background: var(--panel-gray);
+    border-radius: 5px;
+    padding: 7px 15px;
+    color: white;
+    font-size: 14px;
+}
+
+/* Product cards: white armor panels */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 19px;
+}
+
+.product {
+    background: var(--armor-white);
+    color: var(--frame-black);
+    border: 2px solid var(--gundam-blue);
+    border-left: 6px solid var(--gundam-red);
+    border-radius: 5px;
+    padding: 23px;
+    box-shadow: 0 6px 18px #0005;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px #1554B455;
+}
+
+.product-id {
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: var(--gundam-red);
+}
+
+.product h3 {
+    margin: 9px 0 7px;
+    font-size: 20px;
+    color: var(--gundam-blue);
+}
+
+.description {
+    min-height: 48px;
+    color: #475569;
+    margin: 0 0 15px;
+}
+
+.price {
+    font-size: 25px;
+    color: var(--gundam-red);
+    font-weight: bold;
+    margin: 0 0 9px;
+}
+
+.quantity {
+    font-size: 13px;
+    color: #334155;
+}
+
+/* Cart buttons */
+
+.product button {
+    width: 100%;
+    padding: 12px;
+    border: 0;
+    border-radius: 5px;
+    background: var(--gundam-blue);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.product button:disabled {
+    background: #8C9AAB;
+    color: #F4F6FA;
+    cursor: not-allowed;
+}
+
+.product button:not(:disabled) {
+    cursor: pointer;
+}
+
+.product button:not(:disabled):hover {
+    background: var(--gundam-red);
+}
+
+/* Shopping cart page */
+
+.empty-cart {
+    text-align: center;
+    margin: 20px 0 90px;
+    background: var(--panel-gray);
+    border: 2px solid var(--gundam-blue);
+    border-top: 5px solid var(--gundam-red);
+    border-radius: 5px;
+    padding: 60px 20px;
+}
+
+.cart-symbol {
+    font-size: 52px;
+}
+
+.empty-cart h3 {
+    font-size: 25px;
+    color: var(--gundam-yellow);
+}
+
+.empty-cart p {
+    color: #CBD5E1;
+}
+
+.primary-link {
+    display: inline-block;
+    background: var(--gundam-yellow);
+    color: var(--frame-black);
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 14px;
+}
+
+.primary-link:hover {
+    background: var(--gundam-red);
+    color: white;
+}
+
+/* Project note and footer */
+
+.phase-note {
+    color: #B9C5D6;
+    font-size: 13px;
+    margin: 25px 0 8px;
+}
+
+.phase-note code {
+    background: var(--panel-gray);
+    color: var(--gundam-yellow);
+    padding: 2px 5px;
+}
+
+footer {
+    padding-top: 28px !important;
+    padding-bottom: 28px !important;
+    color: #AAB9CC;
+    font-size: 13px;
+    border-top: 1px solid var(--panel-gray);
+}
+
+/* Responsive layout */
+
+@media (max-width: 850px) {
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 570px) {
+    .wrap {
+        padding: 0 18px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header-row,
+    .page-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .page-heading h2 {
+        font-size: 25px;
+    }
+}
